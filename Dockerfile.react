@@ -1,0 +1,11 @@
+FROM node:latest
+
+WORKDIR /app
+
+COPY frontend/ .
+
+RUN npm install
+
+ENV REACT_APP_API_URL=http://express-app:3001
+
+CMD [ "npm", "start" ]

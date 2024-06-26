@@ -63,7 +63,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen(config["port"], () => {
+app.listen(config["port"], '0.0.0.0', () => {
     console.log(`Current port: ${config["port"]}`)
     mongoConnect();
 });

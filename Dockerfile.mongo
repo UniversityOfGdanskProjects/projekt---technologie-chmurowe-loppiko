@@ -3,7 +3,7 @@ FROM mongo:latest
 COPY database/* /docker-entrypoint-initdb.d/
 
 # Przekieruj docker-entrypoint.sh, aby wczytać wszystkie pliki JSON w katalogu /docker-entrypoint-initdb.d/ do bazy danych
-COPY importData.sh /usr/local/bin/
+# COPY importData.sh /usr/local/bin/
 
 # RUN chmod +x /usr/local/bin/importData.sh
 
