@@ -1,0 +1,500 @@
+@import "../../consts/consts.scss";
+
+
+$subjects-main-margin-top: 4rem;
+$subjects-main-introduction-margin-left: 3rem;
+$subjects-main-introduction-title-font-size: 5rem;
+$subjects-main-introduction-description-margin-top: 1.5rem;
+$subjects-main-introduction-description-font-size: 2rem;
+$subjects-main-introduction-description-color: #909090;
+
+$subjects-content-margin-top: 7rem;
+$subjects-sem-same-font-size: 5rem;
+$subjects-sem-name-margin-bottom: 5rem;
+$subjects-sem-number-of-frames-to-iterate: 20;
+$subjects-starting-path-margin-right: 350px;
+$subjects-ending-path-margin-left: 300px;
+
+$subjects-info-boxes-gap: 1rem;
+$subjects-info-box-width: min-content;
+$subjects-info-box-height: 80px;
+$subjects-info-padding: 12px 24px;
+$subjects-info-border-radius: 24px;
+$subjects-info-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+$subjects-info-box-title: 1rem;
+$subjects-info-box-content: 1.5rem;
+
+$subjects-box-content-margin-top: 2rem;
+$subjects-subject-box-heigth: 142px;
+$subjects-subject-box-width: 250px;
+$subjects-subject-border-radius: 20px;
+$subjects-subject-background-color: #F0F5FF;
+$subjects-subject-border: 3px solid $main-color;
+$subjects-subject-padding: 32px 40px;
+$subjects-subject-box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.25);
+$subjects-subject-box-font-size: 2rem;
+$subjects-subject-active-background-color: #dce0e7;
+$subjects-subject-skill-box-padding: 16px;
+$subjects-subject-skill-box-border: 2px solid $main-color;
+$subjects-subject-skill-box-background: rgba(255, 255, 255, 0.20);
+$subjects-subject-skill-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
+$subjects-subject-skill-box-border-radius: 5px;
+
+
+$subjects-subject-decription-title-font-size: 1.8rem;
+$subjects-subject-decription-font-size: 1.2rem;
+$subjects-subject-decription-width: 500px;
+$subjects-subject-decription-title-margin-bottom: 1rem;
+$subjects-subject-decription-main-margin-bottom: 220px;
+
+
+
+$subjects-next-sem-gradient: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79, 0.50) 100%);
+
+
+.subjects-page {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .subjects-main-introduction {
+        margin-top: $subjects-main-margin-top;
+        margin-left: $subjects-main-introduction-margin-left;
+        margin-right: $subjects-main-introduction-margin-left;
+        width: 100%;
+
+        .subjects-main-introduction-title {
+            font-size: $subjects-main-introduction-title-font-size;   
+        }
+
+        .subjects-main-introduction-title-underline {
+            // width: 400px;
+            color: $main-color;
+        }
+
+        .subjects-main-introduction-description {
+            margin-top: $subjects-main-introduction-description-margin-top;
+            font-size: $subjects-main-introduction-description-font-size;
+            color: $subjects-main-introduction-description-color;
+        }
+    }
+
+    .subjects-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        width: $main-content-width;
+        margin-top: $subjects-content-margin-top;
+
+
+        .subject-sem-name {
+            width: 100%;
+
+            // margin-bottom: $subjects-sem-name-margin-bottom;
+            text-decoration: none;
+            text-align: center;
+            font-size: $subjects-sem-same-font-size;
+            color: $main-color;
+        }
+
+        .subject-path-starting {
+            margin-right: $subjects-starting-path-margin-right;
+        }
+
+        .subject-frame {
+            position: relative;
+
+            width: 100%;
+
+            .box {
+                position: relative;
+
+                margin: auto;
+                width: min-content;
+
+                .subject-info {
+                    display: flex;
+                    gap: $subjects-info-boxes-gap;
+                    width: min-content;
+                    margin: auto;
+
+                    .info-box {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center; 
+
+                        width: $subjects-info-box-width;
+                        height: $subjects-info-box-height;
+                        padding: $subjects-info-padding;
+
+                        border-radius: $subjects-info-border-radius;
+                        color: $white-text-color;
+                        background: $main-color;
+                        box-shadow: $subjects-info-box-shadow;
+                        font-size: $subjects-info-box-content;
+                        font-weight: 900;
+
+                        span {
+                            font-size: $subjects-info-box-title;
+                            font-weight: normal;
+                        }
+                    } 
+                }
+                
+                .subject-box-content {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    margin-top: $subjects-box-content-margin-top;
+
+                    .subject-box {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        min-width: $subjects-subject-box-width;
+                        height: $subjects-subject-box-heigth;
+                        padding: $subjects-subject-padding;
+
+                        text-decoration: none;
+                        color: $black-text-color;
+                        border-radius: $subjects-info-border-radius;
+                        border: $subjects-subject-border;
+                        background: $subjects-subject-background-color;
+                        box-shadow: $subjects-subject-box-shadow;
+                        font-size: $subjects-subject-box-font-size; 
+                        text-align: center;
+                    }
+
+                    .subject-box:hover {
+                        cursor: pointer;
+                        background-color: $subjects-subject-active-background-color;
+                    }
+
+                    .skill-box {
+                        display: flex;
+                        align-items: center;
+
+                        position: absolute;
+
+                        width: min-content;
+                        height: min-content;
+
+                        padding: $subjects-subject-skill-box-padding;
+                        border-radius: $subjects-subject-skill-box-border-radius;
+                        border: $subjects-subject-skill-box-border;
+                        background: $subjects-subject-skill-box-background;
+                        box-shadow: $subjects-subject-skill-box-shadow; 
+                        color: $main-color;
+                        text-align: center;
+                        text-decoration: none;
+                    }
+
+                    .subject-skill-path {
+                        position: absolute;
+                        z-index: -10;
+                    }
+
+                    .skill-box:nth-of-type(2) {
+                        right: 400px;
+                        top: 150px;
+                    }
+                    .skill-box:nth-of-type(3) {
+                        left: 390px;
+                        top: 160px;
+                    }
+                    .skill-box:nth-of-type(4) {
+                        right: 390px;
+                        top: 350px;
+                    }
+                    .skill-box:nth-of-type(5) {
+                        left: 380px;
+                        top: 312px;
+                    }
+
+                    .subject-skill-path:nth-of-type(1) {
+                        right: 330px;
+                        top: 180px;
+                    }
+                    .subject-skill-path:nth-of-type(2) {
+                        left: 335px;
+                        top: 190px;
+                    }
+                    .subject-skill-path:nth-of-type(3) {
+                        right: 335px;
+                        top: 320px;
+                    }
+                    .subject-skill-path:nth-of-type(4) {
+                        left: 325px;
+                        top: 340px;
+                    }
+
+                    .skill-box:hover {
+                        cursor: pointer;
+                        background-color: $main-color;
+                        color: $white-text-color;
+                    }   
+                    
+                }
+            }
+
+            .skill-description {
+                position: absolute;
+                margin-bottom: $subjects-subject-decription-main-margin-bottom;
+                
+                font-size: $subjects-subject-decription-font-size;
+                text-align: justify;
+                
+                width: $subjects-subject-decription-width;
+
+                .title {
+                    color: $main-color;
+                    font-size: $subjects-subject-decription-title-font-size;
+
+                    margin-bottom: $subjects-subject-decription-title-margin-bottom;
+                }
+            }
+
+            .skill-description:last-child {
+                margin-bottom: 0;
+            }
+
+
+            .subjects-path-right, .subjects-path-left {
+                margin-left: calc(0.5 * ($subjects-subject-box-width) + 30px);
+            }
+        }
+        
+        @for $frame-number from 1 through $subjects-sem-number-of-frames-to-iterate + 1 {
+            .subject-frame:nth-of-type(#{$frame-number}) {
+                @if $frame-number % 2 == 0 {
+                    .box {
+                        margin-right: 0;
+                    }
+                    .skill-description {
+                        left: 0;
+                        bottom: 35px;
+                    }
+                } @else {
+                    .box {
+                        margin-left: 0;
+                    }
+                    .skill-description {
+                        right: 0;
+                        bottom: 35px;
+                    }
+                }
+            }
+        }
+
+        .subject-path-ending-left {
+            margin-left: $subjects-ending-path-margin-left;
+        }
+        .subject-path-ending-right {
+            margin-right: $subjects-ending-path-margin-left;
+        }
+
+        .subject-next-sem-name {
+            width: 100%;
+
+            // margin-bottom: $subjects-sem-name-margin-bottom;
+            text-decoration: none;
+            text-align: center;
+            font-size: $subjects-sem-same-font-size;
+            background: -webkit-linear-gradient($main-color, $white-text-color);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .subjects-path-right-phone, .subjects-path-left-phone {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 1080px) {
+    .subjects-page {
+        // width: min-content;
+        .subjects-main-introduction {
+            margin-top: calc($subjects-main-margin-top/2);
+            margin-left: calc($subjects-main-introduction-margin-left/2);
+
+            .subjects-main-introduction-title {
+                font-size: calc($subjects-main-introduction-title-font-size/2); 
+                padding-right: 0.5em;  
+            }
+
+            .subjects-main-introduction-title-underline {
+                width: 50%;
+            }
+
+            .subjects-main-introduction-description {
+                margin-top: calc($subjects-main-introduction-description-margin-top / 2);
+                font-size: calc($subjects-main-introduction-description-font-size / 2);
+                padding-right: 0.5em;
+            }
+        }
+
+        .subjects-content {
+            margin-inline: 0.7rem;
+            width: calc($main-content-width/2);
+            margin-top: calc($subjects-content-margin-top/2);
+
+            .subject-sem-name {
+                // width: 100%;
+                width: 100%;
+                text-align: center;
+                font-size: calc($subjects-sem-same-font-size/2);
+            }
+
+            .subject-path-starting {
+                display: none;
+                margin-right: calc($subjects-starting-path-margin-right/2);
+            }
+
+            .subject-frame {
+                display: flex;
+                justify-content: center;
+                right: 0;
+                bottom: 0;
+                margin-top: 3rem;
+                margin-bottom: 3rem;
+
+
+                .box {
+                    margin: 0;
+
+                    .subject-info {
+                        gap: calc($subjects-info-boxes-gap/2);
+                        max-width: 166px;
+
+                        .info-box {
+                            
+                            // width: 100px;
+                            width: 32px;
+                            height: 32px;
+                            padding: 10px;
+                            box-shadow: $subjects-info-box-shadow;
+                            border-radius: 15px;
+                            font-size: calc($subjects-info-box-content/1.75);
+                            font-weight: bold;
+
+                            span {
+                                font-size: calc($subjects-info-box-title/1.5);
+                            }
+                        }
+                    }
+
+                    .subject-box-content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0.5rem;
+                        margin-top: 2rem;
+
+                        .subject-box {
+                            min-width: 0;
+                            height: calc($subjects-subject-box-heigth/2);
+                            width: 80px;
+                            padding: $subjects-subject-padding/2;
+                            margin-bottom: 1.5rem;
+
+                            text-decoration: none;
+                            color: $black-text-color;
+                            border-radius: $subjects-info-border-radius;
+                            border: $subjects-subject-border;
+                            background: $subjects-subject-background-color;
+                            box-shadow: $subjects-subject-box-shadow;
+                            font-size: 1.1rem;
+                            border-radius: 22px; 
+                        }
+
+                        .skill-box {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+
+                            font-size: 0.55rem;
+                            font-weight: bold;
+                            margin-top: 0.5rem;
+                            width: max-content;
+                            position: absolute;
+                            padding: calc($subjects-subject-skill-box-padding/4);
+                            padding-top: 0.5rem;
+                            padding-bottom: 0.5rem;
+                            border-radius: $subjects-subject-skill-box-border-radius;
+                            border: $subjects-subject-skill-box-border;
+
+                            width: 68px;
+                        }
+
+                        .skill-box:nth-of-type(2) {
+                            right: 178px;
+                            top: 80px;
+                        }
+                        .skill-box:nth-of-type(3) {
+                            left: 178px;
+                            top: 80px;
+                        }
+                        .skill-box:nth-of-type(4) {
+                            right: 178px;
+                            top: 200px;
+                        }
+                        .skill-box:nth-of-type(5) {
+                            left: 178px;
+                            top: 200px;
+                        }
+
+                        
+                    }
+                }
+
+                .skill-box:hover {
+                    cursor: pointer;
+                    background-color: $main-color;
+                    color: $white-text-color
+                }
+
+                .skill-description {
+                    display: none;
+                    align-self: center;
+                    max-width: 40%;
+                    top: 20%;
+                    font-size: 10px;
+                    width: calc($subjects-subject-decription-width/2);
+
+                    .title {
+                        font-size: calc($subjects-subject-decription-title-font-size/2);
+                        margin-bottom: calc($subjects-subject-decription-title-margin-bottom/2);
+                    }
+                }
+
+
+            }
+
+            .subject-path-ending-left, .subject-path-ending-right, .subjects-path-right, .subjects-path-left {
+                display: none;
+            }
+
+            .subjects-path-right-phone, .subjects-path-left-phone {
+                display: block;
+                position: absolute;
+                width: 8.5rem;
+                top: 232px;
+            }
+
+
+            .subject-next-sem-name {
+                font-size: calc($subjects-sem-same-font-size/2);
+            }
+        }
+    }
+    .subject-skill-path {
+        display: none;
+    }
+}

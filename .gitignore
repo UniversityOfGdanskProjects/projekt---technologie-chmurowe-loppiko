@@ -112,6 +112,8 @@ acs-*.bib
 *.lzo
 *.lzs
 
+node_modules/
+
 # uncomment this for glossaries-extra (will ignore makeindex's style files!)
 # *.ist
 

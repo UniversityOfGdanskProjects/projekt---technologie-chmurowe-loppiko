@@ -1,0 +1,16 @@
+{
+    "UG-logo-link": "https://www.mfi.ug.edu.pl/",
+    "header-inscryptions": [
+      {"name": "Candidates", "link": "https://www.ug.edu.pl/kandydaci"},
+      {"name": "Students", "link": "https://www.ug.edu.pl/studenci"},
+      {"name": "Workers", "link": "https://www.ug.edu.pl/pracownicy"},
+      {"name": "Graduates", "link": "https://www.ug.edu.pl/absolwenci"},
+      {"name": "Media", "link": "https://www.ug.edu.pl/absolwenci"}
+    ],
+    "icons-links": {
+      "radioIcon": "http://player.mors.ug.edu.pl/sites/all/modules/jplayer/mors_popup.html",
+      "postIcon": "https://outlook.office365.com/mail/",
+      "disabilityIcon": "https://bon.ug.edu.pl/",
+      "enIcon": "https://en.ug.edu.pl"
+    }
+}
