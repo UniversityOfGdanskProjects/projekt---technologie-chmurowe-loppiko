@@ -7,7 +7,9 @@ const cors = require('cors');
 const client = new MongoClient(config["client-url"]);
 const app = express();
 
+
 app.use(cors());
+  
 
 const myDatabase = {};
 
@@ -63,7 +65,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen(config["port"], '0.0.0.0', () => {
+app.listen(config["port"], () => {
     console.log(`Current port: ${config["port"]}`)
     mongoConnect();
 });

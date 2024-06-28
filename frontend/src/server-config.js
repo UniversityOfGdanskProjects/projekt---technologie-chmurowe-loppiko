@@ -1,5 +1,5 @@
 const serverConfig = {
-    "server-url": "http://172.31.0.3:3001",
+    "server-url": process.env.REACT_APP_API_URL,
     "endpoints": {
         "footer": "/footer",
         "header": "/header",

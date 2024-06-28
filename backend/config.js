@@ -1,5 +1,5 @@
 const config = {
-    "client-url": "mongodb://mongo-database:27017/mydatabase",
+    "client-url": process.env.MONGO_URL,
     "database": "mydatabase",
     "port": 3001
 }

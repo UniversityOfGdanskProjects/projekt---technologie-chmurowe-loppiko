@@ -37,7 +37,7 @@ spec:
     spec:
       containers:
       - name: mongo
-        image: loppiko/cloud-technologies:mongo
+        image: loppiko/cloud-project:mongo
         ports:
         - containerPort: 27017
         volumeMounts:

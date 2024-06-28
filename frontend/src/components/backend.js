@@ -6,7 +6,7 @@ async function databaseCommunication(databaseCollection) {
     const requestUrl = `${serverConfig["server-url"]}${serverConfig["endpoints"][databaseCollection]}`;
     
     try {    
-        const response = await axios.get(requestUrl);
+        const response = await axios.get(requestUrl, { crossdomain: true });
         return response.data;
     } catch (error) {
         console.error(`Error occured when connecting to ${requestUrl} database, requesting collection ${databaseCollection}:${serverConfig["endpoints"][databaseCollection]}`)
