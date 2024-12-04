@@ -1,0 +1,288 @@
+@import "../../consts/consts.scss";
+
+
+$semester-content-upper-margin: 8rem;
+$semester-buttton-background-color: #F0F5FF;
+$semester-title-margin-bottom: 4rem;
+$semester-button-font-size: 3rem;
+$semester-button-width: 350px;
+$semester-button-height: 140px;
+$semester-button-padding: 32px 40px;
+$semester-button-padding-horizontal: 40px;
+$semester-button-padding-vertical: 32px;
+$semester-button-box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.25);
+$semester-button-border: $main-color 3px solid; 
+$semester-bachelor-project-gradiend: linear-gradient(180deg, #062D73 0%, rgba(42, 55, 79, 0.50) 100%);
+$semester-bachelor-project-font-size:  $main-title-font-size;
+
+
+$semester-box-4-semester-margin-top: 10rem;
+$semester-box-6-semester-margin-top: calc($semester-button-height + $semester-button-padding-vertical * 2);
+
+$semester-year-name-color: #3371FD;
+
+
+.pick-semester {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .semester-content {
+        width: $main-content-width;
+        margin-top: $semester-content-upper-margin;
+        
+        .semester-title {
+            font-size: $main-title-font-size;
+            color: $main-color;
+            margin-bottom: $semester-title-margin-bottom;
+            width: 100%;
+        }
+
+        .semester-section {
+            display: flex;
+            flex-wrap: wrap;
+
+            margin-top: 8rem;
+
+            @for $i from 1 through 9 {
+                .semester-box-#{$i} {
+                    position: relative;
+                    margin-bottom: 280px;
+                }
+                .path-#{$i} {
+                    position: absolute;
+                    z-index: -1;
+                }
+                .semester-year-box-#{$i} {
+                    display: flex;
+                    align-items: center;
+    
+                    position: absolute;
+                    width: max-content;
+                    height: min-content;
+                }
+            }
+
+            
+
+            
+            .semester-box-1 {
+                .path-1 {
+                    bottom: calc($semester-button-height * 1.3);
+                    left: calc($semester-button-width + $semester-button-padding-horizontal * 2);
+                }
+                .semester-year-box-1 {
+                    bottom: calc($semester-button-height + $semester-button-padding-vertical * 2 + 45px);
+                }
+            }
+
+            .semester-box-2 {
+                margin-top: 2.5rem;
+                .path-2 {
+                    top: calc($semester-button-height + $semester-button-padding-vertical);
+                    left: calc($semester-button-width / 2 - $semester-button-padding-horizontal);
+                }
+                .semester-year-box-2 {
+                    top: calc($semester-button-height * 1.75 + $semester-button-padding-vertical * 2);
+                    right: calc($semester-button-width);
+                }
+            }
+
+            .semester-box-3 {
+                .path-3 {
+                    bottom: calc($semester-button-height + $semester-button-padding-vertical * 2 + $semester-box-4-semester-margin-top);
+                    left: calc($semester-button-width / 2 - 50px);
+                }
+
+                .path-4 {
+                    top: calc($semester-button-height + $semester-button-padding-vertical * 2);
+                    left: calc($semester-button-width / 2 - $semester-button-padding-vertical * 2);
+                }
+            }
+
+            .semester-box-4 {
+                margin-top: $semester-box-4-semester-margin-top;
+                .path-5 {
+                    top: calc($semester-button-height + $semester-button-padding-vertical * 2);
+                }
+                .semester-year-box-3 {
+                    top: calc($semester-button-height + $semester-button-padding-vertical * 2 + 141px);
+                    right: calc($semester-button-width);
+                }
+            }
+
+            .semester-box-5 {
+                margin-top: -1rem;
+                .path-6 {
+                    bottom: calc($semester-button-height + $semester-button-padding-horizontal * 2 + $semester-box-6-semester-margin-top);
+                    left: $semester-button-width;
+                }
+                .path-7 {
+                    bottom: calc($semester-button-height + 2 * $semester-button-padding-vertical);
+                    left: calc($semester-button-width + $semester-button-padding-horizontal * 2);
+                }
+            }
+
+            .semester-box-6 {
+                margin-top: calc($semester-button-height + $semester-button-padding-vertical * 2);
+                .path-8 {
+                    top: calc($semester-button-padding-vertical);
+                    right: calc($semester-button-width + $semester-button-padding-horizontal * 2);
+                }  
+                .semester-year-box-4 {
+                    bottom: -75px;
+                    right: calc($semester-button-width + 2 * $semester-button-padding-horizontal + 200px);
+                }
+                .path-9 {
+                    top: calc($semester-button-height + 2 * $semester-button-padding-vertical + 85px);
+                    right: calc($semester-button-width + 45px);
+                }
+            }
+        }
+
+
+        .semester-year-name {
+            color: $semester-year-name-color;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .semester-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: $semester-button-border;
+            background-color: $semester-buttton-background-color;
+
+            z-index: 2;
+            box-shadow: $semester-button-box-shadow;
+            text-decoration: none;
+            border-radius: $main-border-radius;
+            color: $main-color;
+            font-size: calc($semester-button-font-size * 3/4);
+            width: $semester-button-width;
+            height: $semester-button-height;
+            padding-inline: $semester-button-padding-horizontal;
+            padding-block: $semester-button-padding-vertical;
+
+            span {
+                align-self: stretch; 
+            }
+        }
+
+        .semester-button:hover {
+            background-color: $main-color;
+            color: $white-text-color;
+        }
+
+        .semester-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            gap: 5rem;
+        }
+
+        .semester-bachelor-project {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: $main-title-font-size;
+            background: -webkit-linear-gradient($main-color, $white-text-color);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    .pick-semester {
+        .semester-content {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1em;
+            margin-inline: 0.5rem;
+
+            .semester-title {
+                width: 100%;
+                margin-top: 2rem;
+                font-size: 2.3em;
+            }
+
+            .semester-section {
+                margin-top: 3em;
+                padding: 0;
+                gap: 0;
+            
+
+                @for $i from 1 through 9 {
+                    .semester-box-#{$i} {
+                        position: relative;
+                        width: 150px;
+                        height: auto;
+                        margin: 0;
+                        margin-bottom: 9rem;
+
+                        .semester-button {
+                            width: 100%;
+                            padding-inline: 0;
+
+                        }
+                    }
+
+                    .path-#{$i} {
+                        display: none;
+                    }
+
+                    .semester-year-box-#{$i} {
+                        position: absolute;
+                        bottom: 0;
+                    }
+                }
+            
+
+            .semester-year-name {
+                color: $semester-year-name-color;
+                font-size: 25px;
+                font-weight: bold;
+            }
+
+            .semester-year-box-1 {
+                top: -50px;
+            }
+
+            .semester-year-box-2 {
+                top: 180px !important;
+                left: -200px;
+                // bottom: 0 !important;
+            }
+
+            .semester-year-box-3 {
+                top: 210px !important;
+                left: -200px;
+                // bottom: 0 !important;
+            }
+
+
+            .semester-year-box:nth-last-of-type(2) {
+                position: absolute;
+                bottom: 150px;
+                right: 150px;
+            }
+
+            .semester-button {
+                font-size: 1.3em;
+                width: 9em;
+                height: 3em;
+            }
+            
+
+            .semester-bachelor-project {
+                font-size: 1rem;
+                padding-right: 2em;
+            }
+        }
+        }
+    }
+}

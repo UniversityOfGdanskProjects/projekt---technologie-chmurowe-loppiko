@@ -1,0 +1,218 @@
+@import "../../../consts/consts.scss";
+
+// ---- parameters ----
+$header-height: 3rem;
+$UG-logo-width: 137px;
+$UG-logo-height: 58px;
+$UG-logo-margin-left: 2rem;
+$header-font-size: 1.15rem;
+$header-elements-gap: 1.5rem;
+$header-elements-margin: 8rem;
+$header-buttons-border: solid 1px $white-text-color;
+
+
+
+.header{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content:space-between;
+    
+    height: $header-height;
+    padding: 2rem;
+    
+    background-color: $main-color;
+    color: $white-text-color;
+    font-size: 1.15rem;
+
+    .left-side {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        margin-left: $UG-logo-margin-left;
+
+        img {
+            width: $UG-logo-width;
+            height: $UG-logo-height;
+        }
+
+        .header-elements {
+            display: flex;
+
+            margin-left: $header-elements-margin;
+            gap: $header-elements-gap;
+            
+            .header-button {
+                text-decoration: none;
+                background-color: transparent;
+                border: none;
+                color: $white-text-color;
+                font-size: $header-font-size;
+            }
+
+            .header-button:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .right-side {
+        display: flex;
+        align-items: center;
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            
+            .right-header-icon {
+                height: min-content;
+
+                padding-left: 1rem;
+                padding-right: 1rem;
+                background-color: transparent;
+                border: none;
+                border-right: $header-buttons-border;
+            }
+
+            .right-header-icon:last-of-type {
+                img {
+                    width: 35px;
+                    height: 35px;
+                }
+                border: none;
+            }
+
+            .right-header-icon:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .center-side {
+        display: none;
+        .header-one-icon {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            background-color: transparent;
+            border: none;
+            img {
+                color: $white-text-color;
+                height: 45px;
+            }
+        }
+        .header-one-icon:hover {
+            cursor: pointer;
+        }
+        .center-box {
+            display: none;
+            position: absolute;
+            top: 44em;
+            left: 0;
+            right: 0;
+            background-color: $main-color;
+            // height: 120%;
+            height: 1000%;
+            // bottom: 50%;
+            .center-header-icons {
+                display: flex;
+                flex:1;
+                height: 20em;
+                
+                
+                .center-header-icon {
+                    display: flex;
+                    justify-content: center;
+
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                    background-color: transparent;
+                    border: none;
+                    border-right: $header-buttons-border;
+                    width: 100%;
+                    flex-direction: row;
+                    font-size: 0.5rem;
+                    img {
+                        height: min-content;
+                    }
+                }
+            }
+
+            .center-header-icon:last-of-type {
+                img {
+                    width: 35px;
+                    height: 35px;
+                }
+                border: none;
+            }
+
+            .center-header-elements {
+                display: flex;
+                margin-left: $header-elements-margin;
+                gap: 5em;
+                // width: 100%;
+                flex-direction: column;
+                margin-left: 5em;
+
+                .center-header-button {
+                    background-color: transparent;
+                    text-decoration: none;
+                    border: none;
+                    color: $white-text-color;
+                    font-size: $header-font-size;
+                    border-bottom: $header-buttons-border;
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                    text-align: left;
+
+                }
+    
+                .center-header-button:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .header {
+        padding: 20px;
+        font-size: 2px;
+        z-index:9999;
+        position: relative;
+        // height: 150%;
+        
+        .left-side {
+            // display: flex;
+            // flex-wrap: nowrap;
+            // align-items: center;
+            // z-index:9999;
+            // position: relative;
+            margin-left: 8px;
+            // margin-bottom: 360em;
+            .header-elements {
+                display: none;
+            }
+        }
+    
+        .right-side {
+            display: flex;
+            align-items: center;
+    
+            .header-icons {
+                display: none;
+            }
+        }
+
+        .center-side {
+            display: flex;
+
+            .center-box {
+                display: block;
+            }
+        }
+    }
+}
